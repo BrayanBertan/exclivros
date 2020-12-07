@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>infos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <ion-list-header>
+    <ion-icon name="arrow-back"  [routerLink]="['/listagem']"></ion-icon> Detalhes  
+  </ion-list-header>
+  <div id="divCapa">
+    <ion-slides pager="true" [options]="slideOpts">
+      <ion-slide>
+        <ion-img  id="img-capa" [src]="livro.capa"></ion-img>
+      </ion-slide>
+      <ion-slide>
+        <ion-img  id="img-capa" [src]="livro.capa"></ion-img>
+      </ion-slide>
+      <ion-slide>
+        <ion-img  id="img-capa" [src]="livro.capa"></ion-img>
+      </ion-slide>
+    </ion-slides>
+  </div>
+  <div id="divInfos">
+    <ion-label>
+      <h3>
+        Isbn: {{livro.isbn}}
+      </h3>
+    <h3>
+      Titulo: {{livro.titulo}}
+    </h3>
+    <h3>
+      Paginas: {{livro.paginas}}
+    </h3>
+    <h3>
+      Autor: {{livro.autor}}
+    </h3>
+    <h3>
+      Gênero: {{livro.genero}}
+    </h3>
+    <h3>
+      Lançamento: {{livro.dataLancamento | date: 'dd/MM/yyyy'}}
+    </h3>
+  </ion-label>
+  </div>
+</ion-content>
